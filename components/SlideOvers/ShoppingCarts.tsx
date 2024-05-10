@@ -8,20 +8,21 @@ import Image from "next/image";
 const products = [
   {
     id: 1,
-    name: "Throwback Hip Bag",
+    name: "Introdução ao Desenvolvimento Web",
     href: "#",
-    color: "Salmon",
-    price: "$90.00",
+    color: "Introdução ao curso",
+    price: "Aula-01",
     quantity: 1,
     videoId: "2FObUocCO7I",
-    imageAlt: "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
+    imageAlt:
+      "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
   },
   {
     id: 2,
-    name: "Medium Stuff Satchel",
+    name: "HTML Básico",
     href: "#",
-    color: "Blue",
-    price: "$32.00",
+    color: "Estrutura básica do HTML",
+    price: "Aula-02",
     quantity: 1,
     videoId: "R6x21uPdNzI", // Replace "VIDEO_ID_HERE" with your YouTube video ID
     imageAlt:
@@ -71,7 +72,7 @@ export default function Example() {
                       <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                         <div className="flex items-start justify-between">
                           <Dialog.Title className="text-lg font-medium text-gray-900">
-                            Shopping cart
+                            HTML+CSS+JS
                           </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
@@ -81,10 +82,57 @@ export default function Example() {
                             >
                               <span className="absolute -inset-0.5" />
                               <span className="sr-only">Close panel</span>
-                              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                              <XMarkIcon
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
                             </button>
                           </div>
                         </div>
+
+                        {/* Add the menu bar block below */}
+
+                        <div className="mt-4 border-t border-gray-200 pt-4">
+                          <nav className="flex justify-between">
+                            <Link href="/">
+                              <button className="text-gray-500 hover:text-gray-900">
+                                Videoaulas
+                              </button>
+                            </Link>
+                            <Link href="/products">
+                              <button className="text-gray-500 hover:text-gray-900">
+                                Aulas em PDF
+                              </button>
+                            </Link>
+                            <Link href="/about">
+                              <button className="text-gray-500 hover:text-gray-900">
+                                Anotação
+                              </button>
+                            </Link>
+                            {/* Add more menu items as needed */}
+                          </nav>
+                        </div>
+                        <div className="mt-4 border-t border-gray-200 pt-4"></div>
+                        {/* End of menu bar block */}
+
+                        <div>
+                          <div className="flex justify-between text-base font-medium text-gray-900">
+                            <p>Objetivo</p>
+                            <button
+                              type="button"
+                              className="font-medium text-indigo-600 hover:text-indigo-500"
+                            >
+                              Ver Tudo
+                            </button>
+                          </div>
+                          <p className="mt-0.5 text-sm text-gray-500">
+                            Introduzir os conceitos fundamentais de
+                            desenvolvimento web utilizando HTML, CSS e
+                            JavaScript, capacitando os alunos a criar páginas
+                            web interativas e responsivas.
+                          </p>
+                        </div>
+                        <div className="mt-4 border-t border-gray-200 pt-4"></div>
 
                         <div className="mt-8">
                           <div className="flow-root">
@@ -121,7 +169,7 @@ export default function Example() {
                                     </div>
                                     <div className="flex flex-1 items-end justify-between text-sm">
                                       <p className="text-gray-500">
-                                        Qty {product.quantity}
+                                        00:27:3{product.quantity}
                                       </p>
 
                                       <div className="flex">
@@ -142,30 +190,23 @@ export default function Example() {
                       </div>
 
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                        <div className="flex justify-between text-base font-medium text-gray-900">
-                          <p>Subtotal</p>
-                          <p>$262.00</p>
-                        </div>
-                        <p className="mt-0.5 text-sm text-gray-500">
-                          Shipping and taxes calculated at checkout.
-                        </p>
                         <div className="mt-6">
                           <a
                             href="#"
                             className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                           >
-                            Checkout
+                            Adicionar Video
                           </a>
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                           <p>
-                            or{" "}
+                            ou{" "}
                             <button
                               type="button"
                               className="font-medium text-indigo-600 hover:text-indigo-500"
                               onClick={() => setOpen(false)}
                             >
-                              Continue Shopping
+                              Fechar Janela
                               <span aria-hidden="true"> &rarr;</span>
                             </button>
                           </p>
